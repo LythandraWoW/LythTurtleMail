@@ -1,3 +1,7 @@
+*About
+A fork of Otari98's Turtle WoW Mail AddOn which, by default, ignors non-AH mail unless "Shift" is  being held while pressing teh "Open Mail" button. 
+In other words, "open mail" doesnt eat other player's mail on the 2. page of you mailbox anymore before you get a chance to read it.
+
 # TurtleMail - WoW 1.12 addOn
 
 An extension to the Blizzard mail interface which
