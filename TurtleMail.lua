@@ -339,6 +339,7 @@ function TurtleMail.inbox_open_all()
   m.inbox_update_lock()
   m.inbox_skip = false
   m.inbox_index = 1
+  m.inbox_open_all_ignore_filter = m.api.IsShiftKeyDown()
   m.inbox_update = true
 end
 
@@ -408,6 +409,13 @@ end
 function TurtleMail.inbox_open( i, manual )
   m.debug( "inbox_open" )
   local package_icon, _, sender, subject, money, cod, _, has_item, read, returned, _, _, gm = m.api.GetInboxHeaderInfo( i )
+
+  if not manual and not m.inbox_open_all_ignore_filter and not INBOX_AUCTIONHOUSES[sender] then
+    m.debug("Skipping non-AH mail from: " .. (sender or "<unknown>"))
+    m.inbox_index = m.inbox_index + 1
+    m.inbox_update = true
+    return
+  end
 
   if has_item then
     if not m.received_icon then
