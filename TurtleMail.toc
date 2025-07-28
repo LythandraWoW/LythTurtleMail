@@ -1,7 +1,7 @@
 ﻿
 ## Interface: 11200
-## Title: |cffabd473RP||cffabd473Turtle|cffffffffMail
-## Author: shirsig/sica
+## Title: |cff9400D3Lyth |cffffffffRP_|cffabd473Turtle|cffffffffMail
+## Author: shirsig/sica/lythandra
 ## Version: 1.4.4
 ## Notes: Mailbox enhancement
 ## SavedVariables: TurtleMail_AutoCompleteNames
